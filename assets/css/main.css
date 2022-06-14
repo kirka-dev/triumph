@@ -1,4 +1,4 @@
-@import url('./assets/fonts/robotoslab.css');
+@import url('../../assets/fonts/robotoslab.css');
 
 body
 {
@@ -1151,7 +1151,7 @@ body
     margin-right: 50px;
 
     background-color: none;
-    background-image: url('./assets/img/ico_football.png');
+    background-image: url('../assets/img/ico_football.png');
 }
 
 .benefits-list_football .benefits-list__item:nth-child(2n) .benefits-list__icon
@@ -1170,7 +1170,7 @@ body
     margin-right: 50px;
 
     background-color: none;
-    background-image: url('./assets/img/ico_voleyball.png');
+    background-image: url('../assets/img/ico_voleyball.png');
 }
 
 .benefits-list_voleyball .benefits-list__item:nth-child(2n) .benefits-list__icon
