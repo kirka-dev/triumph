@@ -17,3 +17,9 @@ document.querySelectorAll('.schedule__selector li').forEach((el) => {
         document.querySelector(`.schedule [data-item="${item}"]`).classList.add('item_active');
     });
 })
+
+document.querySelectorAll('.form__selector .form__selector-options li').forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.target.parentNode.parentNode.querySelector('input').value = e.target.innerHTML;
+    })
+})

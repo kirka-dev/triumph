@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script defer src="../assets/js/main.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,8 @@
                         <a href="../#sports"><span>Направления</span></a>
                         <a href="#schedule"><span>Расписание</span></a>
                         <a href="#addresses"><span>Адреса</span></a>
+                        <a href="#news"><span>Новости</span></a>
+                        <a href="#calendar"><span>Календарь</span></a>
                     </nav>
                 </div>
                 <div class="col-2">
@@ -123,13 +126,17 @@
                         <div class="benefits-list__item">
                             <div class="benefits-list__icon"></div>
                             <div class="benefits-list__text">
-                                Дневник спортсмена
+                                <p>
+                                    Дневник спортсмена
+                                </p>
                             </div>
                         </div>
                         <div class="benefits-list__item">
                             <div class="benefits-list__icon"></div>
                             <div class="benefits-list__text">
-                                Современная методика тренировок
+                                <p>
+                                    Современная методика тренировок
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -276,11 +283,21 @@
                                         <img src="../assets/img/application_background_2.png" alt="">
                                     </div>
                                     <div class="col-4">
-                                        <form class="application__form">
+                                        <form class="application__form form">
                                             <input type="text" placeholder="Ваше имя">
                                             <input type="text" placeholder="Телефон">
                                             <input type="text" placeholder="E-mail">
-                                            <input type="text" placeholder="Направление">
+                                            <div class="form__selector">
+                                                <input type="text" placeholder="Направление">
+                                                <ul class="form__selector-options">
+                                                    <li>Кудо</li>
+                                                    <li>Brazilian Jiu-Jitsu</li>
+                                                    <li>Спортивная гимнастика</li>
+                                                    <li>Футбол</li>
+                                                    <li>Волейбол</li>
+                                                    <li>Общая физическая подготовка</li>
+                                                </ul>
+                                            </div>
                                             <button type="submit">Отправить заявку</button>
                                         </form>
                                     </div>

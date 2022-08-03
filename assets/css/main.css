@@ -25,7 +25,7 @@ body
 
 .header__logotype a
 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 500;
 
     text-decoration: none;
@@ -284,7 +284,7 @@ body
 
 .sport-item__title
 {
-    font-size: 24px;
+    font-size: 28px;
 
     position: relative;
 
@@ -302,7 +302,7 @@ body
 {
     position: absolute;
     z-index: 0;
-    top: 20px;
+    top: 24px;
     left: 0;
 
     display: block;
@@ -429,6 +429,7 @@ body
 .application__title
 {
     margin-top: 60px;
+    font-size: 32px;
     padding-left: 25px;
 
     color: #fff;
@@ -1001,7 +1002,7 @@ body
 
 .about-section__text
 {
-    font-size: 13px;
+    font-size: 16px;
 
     max-width: 510px;
     margin: 10px auto;
@@ -1068,7 +1069,7 @@ body
 .benefits-list__item
 {
     display: flex;
-
+    width: 50%;
     margin-left: auto;
 
     align-items: center;
@@ -1082,9 +1083,9 @@ body
 .benefits-list__icon
 {
     box-sizing: content-box;
-    width: 60px;
-    height: 60px;
-    margin: 0 25px;
+    min-width: 60px;
+    min-height: 60px;
+    margin: 0 10px;
 
     border-radius: 100%;
     background-color: #f5f2e8;
@@ -1110,6 +1111,7 @@ body
 
 .benefits-list__text p
 {
+    padding: 0 25px;
     margin: 0;
 }
 
@@ -1148,16 +1150,16 @@ body
 
 .benefits-list_football .benefits-list__icon
 {
-    margin-right: 50px;
+    margin-right: 5px;
 
     background-color: none;
-    background-image: url('../assets/img/ico_football.png');
+    background-image: url('../img/ico_football.png');
 }
 
 .benefits-list_football .benefits-list__item:nth-child(2n) .benefits-list__icon
 {
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 5px;
 }
 
 .benefits-list_voleyball .benefits-list__text
@@ -1167,16 +1169,16 @@ body
 
 .benefits-list_voleyball .benefits-list__icon
 {
-    margin-right: 50px;
+    margin-right: 5px;
 
     background-color: none;
-    background-image: url('../assets/img/ico_voleyball.png');
+    background-image: url('../img/ico_voleyball.png');
 }
 
 .benefits-list_voleyball .benefits-list__item:nth-child(2n) .benefits-list__icon
 {
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 5px;
 }
 
 .coaching-staff__title
@@ -1254,7 +1256,7 @@ body
 
 .about-trainer__text
 {
-    font-size: 13px;
+    font-size: 16px;
 
     max-width: 350px;
     margin: auto;
@@ -1301,4 +1303,38 @@ body
 
     border-radius: 100%;
     background-color: #000;
+}
+
+.form__selector {
+    width: 100%;
+    position: relative;
+}
+
+.form__selector input {
+    pointer-events: none;
+}
+
+.form__selector-options {
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    background-color: #f5f2e8;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.form__selector-options li {
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+.form__selector-options li:hover {
+    font-weight: bold;
+}
+
+.form__selector:hover .form__selector-options {
+    visibility: visible;
 }
