@@ -249,18 +249,67 @@ body
 .header__gym-images
 {
     font-size: 0;
-
+    width: 550px;
     padding-top: 50px;
 }
 
 .header__gym-images img
 {
-    margin-left: 25px;
+    max-width: 100%;
 }
 
-.header__gym-images img:first-child
-{
-    margin-left: 0;
+.mobile-navigation__button {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    padding: 5px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.mobile-navigation__button:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: black;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+}
+
+.mobile-navigation__navigation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    left: 0;
+    top: 0;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    background-color: rgb(0,0,0,.90);
+    z-index: 99999;
+    padding: 30px;
+    max-width: 400px;
+    transform: translateX(-400px);
+    transition: .2s;
+}
+
+.mobile-navigation__navigation_active {
+    transform: translateX(0px);
+}
+
+.mobile-navigation__navigation a {
+    color: white;
+}
+
+.glide__slide {
+    padding: 0 5px;
 }
 
 .sport-item
@@ -450,9 +499,8 @@ body
     display: flex;
 
     max-width: 300px;
-    margin-top: 60px;
     margin-left: auto;
-    padding-right: 25px;
+    padding: 25px;
 
     flex-wrap: wrap;
 }
@@ -820,12 +868,8 @@ body
 
 .addreses__map
 {
-    margin-left: auto;
-}
-
-.addreses__map img
-{
-    max-width: 100%;
+    width: 100%;
+    padding-left: 25px;
 }
 
 .addresses .item {
@@ -1212,7 +1256,8 @@ body
 .trainer__name
 {
     font-size: 18px;
-
+    font-weight: bold;
+    text-align: center;
     margin: 0;
 }
 
@@ -1328,6 +1373,7 @@ body
     background-color: #f5f2e8;
     list-style: none;
     padding: 10px 0;
+    z-index: 999999;
 }
 
 .form__selector-options li {
@@ -1473,6 +1519,7 @@ body
     .trainer__description {
         text-align: center;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1488,14 +1535,101 @@ body
         font-size: 14px;
     }
 
+    .header__gym-images
+    {
+        width: 100%;
+    }
+
     .application__form {
         margin: 0;
         max-width: 100%;
         padding: 15px;
     }
+
+    .schedule-list ul {
+        min-height: auto;
+    }
+
+    .footer__navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__tel {
+        font-size: 14px;
+    }
+
+    .sport-item__cover {
+        min-width: 75px;
+        max-width: 75px;
+        height: 30px;
+    }
+
+    .addresses .item {
+        flex-wrap: wrap;
+
+        transform: translateY(-200px);
+    }
+
+    .addresses .item .addreses__map iframe {
+        height: 0;
+    }
+
+    .addresses .item_active .addreses__map iframe {
+        height: 400px;
+    }
+
+    .addreses__map {
+        padding: 0;
+    }
+
+    .addresses__list li {
+        width: 100%;
+    }
+
+    .about-section__image img {
+        display: block;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__sub-title {
+        max-width: 315px;
+    }
+
+    .footer__text {
+        padding-top: 15px;
+    }
+
+    .footer__text {
+        text-align: left;
+    }
+
+    .footer__text span {
+        display: block;
+    }
+
+    .footer__tel {
+        margin-left: 0;
+    }
+
+    .benefits-list__item {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 420px) {
+    .header {
+        background-position: bottom center, right -50px bottom 0px;
+        background-size: 100%, 50%;
+        padding-bottom: 85px;
+    }
+
+    .header_low {
+        padding-bottom: 0;
+    }
+
     .sport-item {
         flex-wrap: wrap;
         margin-top: 0px;
@@ -1515,8 +1649,8 @@ body
         margin: 20px auto 0;
     }
 
-    .schedule-list ul {
-        min-height: auto;
+    .schedule__selector {
+        padding-bottom: 0;
     }
 
     .schedule-list ul br {
@@ -1529,27 +1663,5 @@ body
 
     .addresses__selector li {
         width: 45%;
-    }
-
-    .footer__text {
-        text-align: left;
-    }
-
-    .footer__text span {
-        display: block;
-    }
-
-    .footer__tel {
-        margin-left: 0;
-    }
-
-    .addresses .item {
-        flex-wrap: wrap;
-
-        transform: translateY(-200px);
-    }
-
-    .addreses__map {
-        padding: 0;
     }
 }
